@@ -10,6 +10,7 @@ cfg.read("config.ini",encoding="utf-8")
 
 model_engine = cfg.get("OpenAI", "model_engine")
 openai.api_key = cfg.get("OpenAI", "API")
+print(cfg.get("OpenAI", "API"))
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=cfg.get("Google", "GOOGLE_APPLICATION_CREDENTIALS_PATH").replace('\\','/')
 
 #---------------------------------
